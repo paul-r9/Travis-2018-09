@@ -30,16 +30,15 @@ public class SampleTest {
         // Act
 
         // Assert
-        Assert.fail();
         Assert.assertNotEquals(players.get(0).getPlayerNumber(),players.get(1).getPlayerNumber());
     }
 
-//    //    Players can't go twice
+    //    Players can't go twice
 //    @Test
 //    public void playersCannotGoTwiceInARow() {
 //
 //        // Arrange
-//        int actual = TicTacToe.startGame();
+//        List<PlayerInstance> players = TicTacToe.startGame();
 //
 //
 //        // Act

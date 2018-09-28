@@ -4,8 +4,8 @@ import java.util.List;
 public class TicTacToe {
 
     public static final int NUM_PLAYERS = 2;
-//    public static int THIS_MOVE = 0;
-//    public static int NEXT_MOVE = 0;
+    public static PlayerInstance THIS_MOVE;
+    public static PlayerInstance NEXT_MOVE;
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
