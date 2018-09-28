@@ -43,6 +43,7 @@ public class SampleTest {
         Assert.assertNotEquals(PlayerX, PlayerY);
 
     }
+    @Ignore
     @Test
     public void addThingsToBoard() {
         //Arrange
