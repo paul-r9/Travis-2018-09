@@ -13,7 +13,8 @@ public class TicTacToe {
     }
 
     public Boolean isWin() {
-        return (board[0] == 'X' && board[1] == 'X' && board[2] == 'X');
+        return ((board[0] == 'X' && board[1] == 'X' && board[2] == 'X' ) ||
+                 board[0] == 'O' && board[1] == 'O' && board[2] == 'O');
     }
 
     public void setBoard(char[] input) {

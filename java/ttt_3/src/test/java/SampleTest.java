@@ -27,7 +27,7 @@ public class SampleTest {
     }
 
     @Test
-    public void canEvaluateHorizontalWinOnFirstRow() {
+    public void canEvaluateHorizontalWinForXFirstRow() {
         TicTacToe ttt = new TicTacToe();
         ttt.setBoard(new char[]{'X','X','X',' ',' ',' ',' ',' ',' '});
         Boolean win = ttt.isWin();
@@ -35,10 +35,20 @@ public class SampleTest {
     }
 
     @Test
-    public void canEvaluateHorizontalNotWinOnFirstRow() {
+    public void canEvaluateHorizontalNotWinForXFirstRow() {
         TicTacToe ttt = new TicTacToe();
         ttt.setBoard(new char[]{'X', ' ', 'X', ' ', ' ', ' ', ' ', ' ', ' '});
         Boolean win = ttt.isWin();
         Assert.assertFalse(win);
     }
+
+    @Test
+    public void canEvaluateHorizontalWinForOFirstRow() {
+        TicTacToe ttt = new TicTacToe();
+        ttt.setBoard(new char[]{'O', 'O', 'O', ' ', ' ', ' ', ' ', ' ', ' '});
+        Boolean win = ttt.isWin();
+        Assert.assertTrue(win);
+    }
+
+    
 }
