@@ -6,8 +6,17 @@ public class TicTacToe {
         System.out.println("Hello World!");
     }
 
+    char[] board;
 
-    public String getBoard() {
-        return "";
+    public char[] getBoard() {
+        return board;
+    }
+
+    public Boolean isWin() {
+        return true;
+    }
+
+    public void setBoard(char[] input) {
+        board = input;
     }
 }
