@@ -33,4 +33,12 @@ public class SampleTest {
         Boolean win = ttt.isWin();
         Assert.assertTrue(win);
     }
+
+    @Test
+    public void canEvaluateHorizontalNotWinOnFirstRow() {
+        TicTacToe ttt = new TicTacToe();
+        ttt.setBoard(new char[]{'X', ' ', 'X', ' ', ' ', ' ', ' ', ' ', ' '});
+        Boolean win = ttt.isWin();
+        Assert.assertFalse(win);
+    }
 }
