@@ -26,4 +26,11 @@ public class SampleTest {
         Assert.assertEquals('X', board[0]);
     }
 
+    @Test
+    public void canEvaluateHorizontalWinOnFirstRow() {
+        TicTacToe ttt = new TicTacToe();
+        ttt.setBoard(new char[]{'X','X','X',' ',' ',' ',' ',' ',' '});
+        Boolean win = ttt.isWin();
+        Assert.assertTrue(win);
+    }
 }
