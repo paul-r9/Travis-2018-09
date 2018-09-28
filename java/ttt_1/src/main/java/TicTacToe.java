@@ -7,13 +7,15 @@ public class TicTacToe {
         this.board = new String[][]{{"", "", ""}, {"", "", ""}, {"", "", ""}};
     }
 
-    public void takeTurn(int i, int i1) {
+    public void takeTurn(int x, int y) {
         String player = "X";
         if (!this.XTurn)
             player = "O";
 
         // check value of position
+        getPos(x, y);
 
+        board[x - 1][y - 1] = player;
 
         this.XTurn = !this.XTurn;
     }

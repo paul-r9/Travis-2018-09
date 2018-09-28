@@ -43,19 +43,17 @@ public class SampleTest {
         Assert.assertNotEquals(PlayerX, PlayerY);
 
     }
-    @Ignore
     @Test
     public void addThingsToBoard() {
         //Arrange
         TicTacToe board = new TicTacToe();
-        board.takeTurn(3, 2);
 
         //Act
-        // x = True
-        String actual = board.getPos(3, 2);
+        board.takeTurn(3, 2);
+
 
         // Assert
-        Assert.assertEquals("X", actual);
+        Assert.assertEquals("X", board.board[2][1]);
 
 
     }
