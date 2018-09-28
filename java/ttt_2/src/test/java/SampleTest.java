@@ -30,6 +30,7 @@ public class SampleTest {
         // Act
 
         // Assert
+        Assert.fail();
         Assert.assertNotEquals(players.get(0).getPlayerNumber(),players.get(1).getPlayerNumber());
     }
 
