@@ -14,7 +14,23 @@ public class SampleTest {
     @Test
     public void newBoardIsEmpty() {
         TicTacToe ttt = new TicTacToe();
-        String board = ttt.getBoard();
-        Assert.assertEquals("", board);
+        char[] board = ttt.getBoard();
+        Assert.assertNull(board);
+    }
+
+    @Test
+    public void canPopulateBoard() {
+        TicTacToe ttt = new TicTacToe();
+        ttt.setBoard(new char[]{'X',' ',' ',' ',' ',' ',' ',' ',' '});
+        char[] board = ttt.getBoard();
+        Assert.assertEquals('X', board[0]);
+    }
+
+    @Test
+    public void canEvaluateHorizontalWinOnFirstRow() {
+        TicTacToe ttt = new TicTacToe();
+        ttt.setBoard(new char[]{'X','X','X',' ',' ',' ',' ',' ',' '});
+        Boolean win = ttt.isWin();
+        Assert.assertTrue(win);
     }
 }
