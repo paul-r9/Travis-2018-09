@@ -8,4 +8,15 @@ public class SampleTest {
         TicTacToe board = new TicTacToe();
         Assert.assertNotNull(board.board);
     }
+    @Test
+    public void playersTakeTurns() {
+        // Arrange
+        TicTacToe board = new TicTacToe();
+        // Act
+        board.takeTurn(3, 2);
+        // Assert
+        Assert.assertEquals(false, board.XTurn);
+
+
+    }
 }
