@@ -4,7 +4,8 @@ import org.junit.Test;
 public class SampleTest {
 
     @Test
-    public void exampleTest() {
-        Assert.assertTrue("Example of a passing assertion", true);
+    public void createBoard() {
+        TicTacToe board = new TicTacToe();
+        Assert.assertNotNull(board.board);
     }
 }
