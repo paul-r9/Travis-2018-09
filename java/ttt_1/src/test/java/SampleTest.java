@@ -1,5 +1,8 @@
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
+
+import java.lang.reflect.Array;
 
 public class SampleTest {
 
@@ -7,6 +10,14 @@ public class SampleTest {
     public void confirmBoardIsNotNull() {
         TicTacToe board = new TicTacToe();
         Assert.assertNotNull(board.board);
+    }
+    @Test
+    public void confirmBoardValuesAreEmptyStrings() {
+        TicTacToe board = new TicTacToe();
+
+        String[] expected = new String[]{"", "", ""};
+
+        Assert.assertEquals(expected, board.board[0]);
     }
     @Test
     public void playerX_MakesFirstMove() {
@@ -32,5 +43,37 @@ public class SampleTest {
         Assert.assertNotEquals(PlayerX, PlayerY);
 
     }
+    @Test
+    public void addThingsToBoard() {
+        //Arrange
+        TicTacToe board = new TicTacToe();
+        board.takeTurn(3, 2);
+
+        //Act
+        // x = True
+        String actual = board.getPos(3, 2);
+
+        // Assert
+        Assert.assertEquals("X", actual);
+
+
+    }
+    @Ignore
+    @Test
+    public void cannotChooseSameSpaceAndDoesntChangeTurns() {
+        //Arrange
+        TicTacToe board = new TicTacToe();
+
+        //Act
+        // x = True
+        board.takeTurn(3, 2);
+        // x = False
+        board.takeTurn(3, 2);
+        // x = False
+
+        //Assert
+        Assert.assertFalse(board.XTurn);
+    }
+
 
 }

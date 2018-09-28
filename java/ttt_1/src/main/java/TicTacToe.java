@@ -1,10 +1,10 @@
 public class TicTacToe {
 
-    public static String[][] board = new String[3][3];
+    public String[][] board;
     public boolean XTurn = true;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    TicTacToe () {
+        this.board = new String[][]{{"", "", ""}, {"", "", ""}, {"", "", ""}};
     }
 
     public void takeTurn(int i, int i1) {
@@ -12,6 +12,13 @@ public class TicTacToe {
         if (!this.XTurn)
             player = "O";
 
+        // check value of position
+
+
         this.XTurn = !this.XTurn;
+    }
+
+    public String getPos(int i, int i1) {
+        return "O";
     }
 }
